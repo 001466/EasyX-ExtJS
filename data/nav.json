@@ -6,7 +6,24 @@
 		"cls": "node-link",
 		"mod": "desktop",
 		"modUrl": "desktop.Desktop"
-	}, {
+	},{
+		"text": "订单",
+		"leaf": true,
+		"cls": "node-link",
+		"mod": "desktop",
+		"modUrl": "desktop.Desktop"
+	},{
+		"text": "访客",
+		"leaf": true,
+		"cls": "node-link",
+		"mod": "desktop",
+		"modUrl": "desktop.Desktop"
+	}
+
+
+
+
+		/*{
 		"text": "系统管理",
 		"expanded": true,
 		"cls": "node-link",
@@ -59,5 +76,7 @@
 			"text": "报表打印",
 			"leaf": true
 		}]
-	}]
+	}*/
+
+	]
 }
