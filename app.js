@@ -2,6 +2,9 @@
  * Application's entrance
  */
 
+
+var __ctx="http://localhost:8888";
+
 //设置插件加载目录
 Ext.Loader.setConfig({
 	enabled: true,

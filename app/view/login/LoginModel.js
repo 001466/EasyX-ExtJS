@@ -3,7 +3,7 @@ Ext.define("App.view.login.LoginModel", {
 	alias: "viewmodel.login",
 	
 	data: {
-		username: "Neo",
-		password: "123456"
+		username: "admin",
+		password: "fuckyourself"
 	}
 });

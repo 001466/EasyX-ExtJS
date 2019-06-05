@@ -10,14 +10,8 @@
 		"text": "订单",
 		"leaf": true,
 		"cls": "node-link",
-		"mod": "desktop",
-		"modUrl": "desktop.Desktop"
-	},{
-		"text": "访客",
-		"leaf": true,
-		"cls": "node-link",
-		"mod": "desktop",
-		"modUrl": "desktop.Desktop"
+		"mod": "order",
+		"modUrl": "order.Order"
 	}
 
 

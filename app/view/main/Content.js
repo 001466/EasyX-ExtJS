@@ -6,7 +6,7 @@ Ext.define("App.view.main.Content", {
 	extend: "Ext.container.Container",
 	xtype: "content",
 	id: "mainContent",
-	uses: ["App.view.role.Role"],
+	uses: ["App.view.order.Order"],
 	
 	initComponent: function() {
 		Ext.apply(this, {
@@ -14,7 +14,7 @@ Ext.define("App.view.main.Content", {
 			margin: "0 5 0 0",
 			layout: "fit",
 			items: [{
-				xtype: "role"
+				xtype: "order"
 			}]
 		});
 		this.callParent(arguments);

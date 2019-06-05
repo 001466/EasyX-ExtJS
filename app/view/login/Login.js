@@ -31,6 +31,7 @@ Ext.define("App.view.login.Login", {
 					cls: "login-logo"
 				}, {
 					xtype: "form",
+					url:__ctx+"/admin/login",
 					reference: "loginForm",
 					defaultType: "textfield",
 					fieldDefaults: {

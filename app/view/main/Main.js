@@ -9,6 +9,7 @@ Ext.define("App.view.main.Main", {
 		"App.view.main.MainModel",
 		"App.view.main.MainController"
 	],
+	id: "mainViewport",
 	viewModel: {type: "main"},
 	controller: "main",
 	uses: [

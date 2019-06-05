@@ -15,9 +15,35 @@ Ext.define("App.view.login.LoginController", {
 	
 	doLogin: function() {
 		var form = this.lookupReference("loginForm");
+		var me=this;
 		if(form.isValid()) {
-			this.getView().destroy();
-			Ext.create("App.view.main.Main");
+
+		     form.submit({
+		        scope:this,
+                success: function(form, action) {
+                   me.getView().destroy();
+                   Ext.create("App.view.main.Main");
+
+                   //headers
+
+                   Ext.Ajax.on("beforerequest",	function(    conn,   options,   eOpts) {
+
+                    Ext.apply(options, {
+                        headers:{
+                            "Authorization":true
+                        }
+                    });
+
+                    console.log(options);
+
+                   }, me);
+                },
+                failure: function(form, action) {
+                    console.log(action);
+                    Ext.Msg.alert('Failed', action.result ? action.result.msg : 'No response');
+                }
+             });
+
 		}
 	}
 });
