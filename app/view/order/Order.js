@@ -56,11 +56,11 @@ Ext.define("App.view.order.Order", {
 				align: "center",
 				sortable: false,
 				menuDisabled: true,
-				items: [{
+				items: [/*{
 					iconCls: "opt-edit",
 					tooltip: "编辑",
 					handler: "edit"
-				}, {
+				},*/ {
 					iconCls: "opt-delete",
 					tooltip: "删除",
 					handler: "del"

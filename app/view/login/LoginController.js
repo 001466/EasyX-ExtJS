@@ -24,22 +24,20 @@ Ext.define("App.view.login.LoginController", {
                    me.getView().destroy();
                    Ext.create("App.view.main.Main");
 
-                   //headers
 
                    Ext.Ajax.on("beforerequest",	function(    conn,   options,   eOpts) {
-
-                    Ext.apply(options, {
-                        headers:{
-                            "Authorization":true
-                        }
-                    });
-
-                    console.log(options);
-
+                        Ext.apply(options, {
+                            headers:{
+                                "Authorization":action.result.data.token
+                            }
+                        });
+                        //console.log(options);
                    }, me);
+
+
                 },
                 failure: function(form, action) {
-                    console.log(action);
+                    //console.log(action);
                     Ext.Msg.alert('Failed', action.result ? action.result.msg : 'No response');
                 }
              });

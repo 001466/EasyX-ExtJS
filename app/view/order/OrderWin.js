@@ -78,18 +78,9 @@ Ext.define("App.view.order.OrderWin", {
                         xtype: "combobox",
                         name: "status",
                         fieldLabel: "订单状态",
-                        store:Ext.create('Ext.data.Store', {
-                           model: 'Dic',
-                           proxy: {
-                               type: 'ajax',
-                               url: "data/orderStatus.json", //模拟后台访问地址
-                               reader: {
-                                   type: 'json',
-                                   root: 'users'
-                               }
-                           },
-                           autoLoad: true
-                        }),
+                        bind: {
+                            store: "{status}"
+                        },
                         displayField: "name",
                         valueField: "id",
                         editable : false
