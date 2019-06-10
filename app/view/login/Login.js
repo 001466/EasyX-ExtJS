@@ -6,6 +6,7 @@ Ext.define("App.view.login.Login", {
 		"App.view.login.LoginModel",
 		"App.view.login.LoginController"
 	],
+	id: "loginViewport",
 	viewModel: {
 		type: "login"
 	},

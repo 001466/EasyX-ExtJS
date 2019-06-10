@@ -9,12 +9,36 @@ Ext.define("App.view.order.OrderController", {
 	uses: ["App.view.order.OrderWin"],
 	
 	init: function() {
+	
+
 		this.st = Ext.getCmp("orderGrid").getStore(); //通过Component获取Store
+		this.tb = Ext.getCmp("orderGrid").getDockedItems('toolbar[dock="top"]')[0];
+
+		
+		
+
+		this.getViewModel().getStore("order").addListener('beforeload',function(store, options){
+			 
+
+			var sd= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=startDate]", this.tb)[0].getValue(),"Y-m-d");
+			var ed= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=endDate]", this.tb)[0].getValue(),"Y-m-d");
+
+			 
+		    
+		    Ext.apply(store.proxy.extraParams, {
+		     	startDate:sd,
+				endDate:ed
+		    }); 
+
+		 },this);
+
 	},
 	
 	//搜索
 	search: function() {
-		this.getViewModel().getStore("order").reload();
+		
+ 		this.getViewModel().getStore("order").reload();
+
 	},
 	
 	//新增
@@ -27,7 +51,7 @@ Ext.define("App.view.order.OrderController", {
 	edit: function(grid, rowIndex, colIndex) {
 		var rec = grid.getStore().getAt(rowIndex);		
 		var win = Ext.create("App.view.order.OrderWin", {
-			title: "编辑角色 - #" + rec.get("id")
+			title: "编辑 - #" + rec.get("id")
 		});
 		win.down("form").loadRecord(rec);
 		win.show();
@@ -35,10 +59,22 @@ Ext.define("App.view.order.OrderController", {
 	
 	//删除
 	del: function(grid, rowIndex, colIndex) {
-		var msg = "确认删除角色：" + grid.getStore().getAt(rowIndex).get("orderName") + " ？";
+		var msg = "确认删除：" + grid.getStore().getAt(rowIndex).get("customName") + " ？";
+		var me=this;
 		Ext.Msg.confirm("确认", msg, function(res) {
 			if(res == "yes") {
-				grid.getStore().removeAt(rowIndex);
+				//grid.getStore().removeAt(rowIndex);
+				var id=grid.getStore().getAt(rowIndex).get("id");
+				Ext.Ajax.request({
+				    //请求地址
+				    url: __ctx+"/admin/order/del/"+id,
+				    method: 'post',
+				    async: false,//Ext.Ajax.request默认是异步的，可以通过设置参数async:false来使其变为同步
+				    success: function (response, success) {
+				        me.getViewModel().getStore("order").reload();
+				    }
+				});
+
 			}
 		});
 	},
@@ -53,13 +89,13 @@ Ext.define("App.view.order.OrderController", {
 			for(var i=0;i<recs.length;i++) {
 				names += recs[i].data.customName+"<br />";
 			}
-			Ext.Msg.confirm("确认", "确认删除以下角色？<br />"+names, function(res) {
+			Ext.Msg.confirm("确认", "确认删除以下？<br />"+names, function(res) {
 				if(res=="yes") {
 					st.remove(recs);
 				}
 			});
 		}else {
-			Ext.Msg.alert("信息", "请选择要删除的角色！");
+			Ext.Msg.alert("信息", "请选择要删除的！");
 		} 
 	},
 	

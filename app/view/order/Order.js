@@ -37,7 +37,25 @@ Ext.define("App.view.order.Order", {
 				text: "联系方式",
 				dataIndex: "customMobile",
 				flex: 2
-			}, {
+			},{
+                text: "省份",
+               dataIndex: "deliverProvince",
+               flex: 1
+            },
+            {
+                text: "城市",
+                dataIndex: "deliverCity",
+                flex: 1
+            },
+            {
+                text: "地址",
+                dataIndex: "deliverAdderss",
+                flex: 2
+            },
+
+
+
+            {
                 text: "产品名称",
                 dataIndex: "productType",
                 flex: 2
@@ -49,7 +67,11 @@ Ext.define("App.view.order.Order", {
                text: "产品价格",
                dataIndex: "productPrices",
                flex: 2
-             }, {
+             },{
+               text: "客户留言",
+               dataIndex: "customContent",
+               flex: 2
+             },{
 				xtype: "actioncolumn",
 				text: "操作",
 				width: 100,
@@ -85,7 +107,7 @@ Ext.define("App.view.order.Order", {
 				text: "搜索",
 				glyph: 0xf002,
 				handler: "search"
-			}, "->", "->", {
+			}, "->", "->"/*, {
 				xtype: "button",
 				text: "新增",
 				glyph: 0xf067,
@@ -95,7 +117,7 @@ Ext.define("App.view.order.Order", {
 				text: "批量删除",
 				glyph: 0xf00d,
 				handler: "batchDel"
-			}],
+			}*/],
 			bbar: {
 				xtype: "pagingtoolbar",
 				bind: {
