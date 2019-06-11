@@ -26,20 +26,21 @@ Ext.define("App.view.login.LoginController", {
 
 
                    Ext.Ajax.on("beforerequest",	function(    conn,   options,   eOpts) {
-                   		console.log(options);
+
 
                         Ext.apply(options, {
                             headers:{
                                 "Authorization":action.result.data.token
                             }
                         });
-                        console.log(options);
+
+                        __tk=action.result.data.token;
+
                    }, me);
 
 
                 },
                 failure: function(form, action) {
-                    //console.log(action);
                     Ext.Msg.alert('Failed', action.result ? action.result.msg : '登陆失败！');
                 }
              });

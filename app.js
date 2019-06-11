@@ -6,6 +6,8 @@
 //var __ctx="http://localhost:8888";
 var __ctx="http://svr.ecfuck.xyz";
 
+var __tk;
+
 //设置插件加载目录
 Ext.Loader.setConfig({
 	enabled: true,

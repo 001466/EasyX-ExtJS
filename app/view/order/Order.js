@@ -52,9 +52,6 @@ Ext.define("App.view.order.Order", {
                 dataIndex: "deliverAdderss",
                 flex: 2
             },
-
-
-
             {
                 text: "产品名称",
                 dataIndex: "productType",
@@ -66,7 +63,7 @@ Ext.define("App.view.order.Order", {
              },{
                text: "产品价格",
                dataIndex: "productPrices",
-               flex: 2
+               flex: 1
              },{
                text: "客户留言",
                dataIndex: "customContent",
@@ -107,12 +104,12 @@ Ext.define("App.view.order.Order", {
 				text: "搜索",
 				glyph: 0xf002,
 				handler: "search"
-			}, "->", "->"/*, {
+			}, "->", "->", {
 				xtype: "button",
-				text: "新增",
-				glyph: 0xf067,
-				handler: "add"
-			}, {
+				text: "导出",
+				glyph: 0xf0ed,
+				handler: "exp"
+			}/*, {
 				xtype: "button",
 				text: "批量删除",
 				glyph: 0xf00d,

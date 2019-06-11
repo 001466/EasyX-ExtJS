@@ -36,10 +36,14 @@ Ext.define("App.view.order.OrderController", {
 	
 	//搜索
 	search: function() {
-		
  		this.getViewModel().getStore("order").reload();
-
 	},
+
+	exp:function(){
+        var sd= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=startDate]", this.tb)[0].getValue(),"Y-m-d");
+    	var ed= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=endDate]", this.tb)[0].getValue(),"Y-m-d");
+    	window.location.href=__ctx+"/admin/order/export"+"?startDate="+sd +"&endDate="+ed +"&Authorization="+__tk;
+    },
 	
 	//新增
 	add: function() {
@@ -78,6 +82,8 @@ Ext.define("App.view.order.OrderController", {
 			}
 		});
 	},
+
+
 	
 	//批量删除
 	batchDel: function() {
