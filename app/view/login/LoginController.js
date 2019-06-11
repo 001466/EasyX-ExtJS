@@ -27,14 +27,14 @@ Ext.define("App.view.login.LoginController", {
 
                    Ext.Ajax.on("beforerequest",	function(    conn,   options,   eOpts) {
 
-
+                        __tk=action.result.data.token;
                         Ext.apply(options, {
                             headers:{
-                                "Authorization":action.result.data.token
+                                "Authorization":__tk
                             }
                         });
 
-                        __tk=action.result.data.token;
+
 
                    }, me);
 

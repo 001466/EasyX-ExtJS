@@ -104,12 +104,12 @@ Ext.define("App.view.order.Order", {
 				text: "搜索",
 				glyph: 0xf002,
 				handler: "search"
-			}, "->", "->", {
-				xtype: "button",
-				text: "导出",
-				glyph: 0xf0ed,
-				handler: "exp"
-			}/*, {
+			}, {
+                xtype: "button",
+                text: "导出",
+                glyph: 0xf0ed,
+                handler: "exp"
+            }, "->", "->"/*, {
 				xtype: "button",
 				text: "批量删除",
 				glyph: 0xf00d,
