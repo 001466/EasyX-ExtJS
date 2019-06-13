@@ -36,7 +36,35 @@ Ext.define("App.view.main.MainController", {
 		Ext.create("App.view.login.Login");
 	},
 
-	onLaunch: function() {
-        alert("Main Controller onLaunch");
+	setPasswd:function(){
+        var win = Ext.create("App.view.main.PasswdWin");
+		win.show();
+	},
+
+	clsPasswd:function(btn){
+	    btn.up("passwdwin").close();
+	},
+
+	sbmPasswd:function(btn){
+	    var fr = this.lookupReference("passwdForm").getForm();
+        if(fr.isValid()) {
+            fr.submit({
+                url:__ctx+"/admin/user/password/reset",
+                success: function(form, action) {
+                   console.log(action);
+
+                   Ext.Msg.alert('保存成功', action.result.message);
+
+                   btn.up("passwdwin").close();
+                },
+                failure: function(form, action) {
+                    Ext.Msg.alert('操作失败', action.result.message);
+                }
+            });
+        }
+
+
     }
+
+
 });

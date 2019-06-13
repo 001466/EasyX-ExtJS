@@ -22,13 +22,21 @@ Ext.define("App.view.main.Top", {
 				cls: "top-tool",
 				items: [{
 					xtype: "label",
-					html: "<i class='icon-user'></i> 欢迎您，Neo"
-				}, {
+					html: "<i class='icon-user'></i> "
+				},{
+				    id:"loginDisplayLabel",
+                    xtype: "label"
+                }, {
 					xtype: "xbtn",
 					text: "退出",
 					glyph: 0xf011,
 					handler: "exitSys"
-				}]
+				},{
+                    xtype: "xbtn",
+                    text: "修改密码",
+                    glyph: 0xf14b,
+                    handler: "setPasswd"
+                }]
 			}]
 		}); 
 		this.callParent(arguments);

@@ -6,7 +6,9 @@
 //var __ctx="http://localhost:8888";
 var __ctx="http://svr.ecfuck.xyz";
 
-var __tk;
+var __usr;
+var __tkn;
+
 
 //设置插件加载目录
 Ext.Loader.setConfig({
@@ -19,6 +21,5 @@ Ext.Loader.setConfig({
 Ext.application({
 	extend: "App.Application",
 	name: "App",
-	
 	autoCreateViewport: "App.view.main.Main"
 });

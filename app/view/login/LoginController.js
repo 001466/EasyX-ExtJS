@@ -21,21 +21,24 @@ Ext.define("App.view.login.LoginController", {
 		     form.submit({
 		        scope:this,
                 success: function(form, action) {
+
+                   __usr=action.result.data;
+                   __tkn=__usr.token;
+
                    me.getView().destroy();
                    Ext.create("App.view.main.Main");
-
+                   Ext.getCmp("loginDisplayLabel").setText(__usr.username);
 
                    Ext.Ajax.on("beforerequest",	function(    conn,   options,   eOpts) {
-
-                        __tk=action.result.data.token;
                         Ext.apply(options, {
                             headers:{
-                                "Authorization":__tk
+                                "Authorization":__tkn
                             }
                         });
 
-
-
+                        Ext.apply(options.params, {
+                            "tenantCode":__usr.tenantCode
+                        });
                    }, me);
 
 
