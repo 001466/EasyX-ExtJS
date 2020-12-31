@@ -3,11 +3,15 @@
  */
 
 
-//var __ctx="http://localhost:8888";
-var __ctx="http://svr.ecfuck.xyz";
+var __ctx="http://localhost:1000";
+//var __ctx="http://svr.ecfuck.xyz";
 
 var __usr;
 var __tkn;
+var __cid="extjs";
+var __csc="extjs";
+var __scp="all";
+var __grt="password";
 
 
 //设置插件加载目录

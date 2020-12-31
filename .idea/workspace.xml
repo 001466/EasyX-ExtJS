@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0601f2c1-bbf8-41ff-b723-c2006a7088c0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/view/main/PasswdWin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/login/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/login/LoginController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/main/MainController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/main/MainController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/main/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/main/Top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/order/OrderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/order/OrderController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,12 +14,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="325">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/login/Login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -79,83 +102,45 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-192" />
-    <option name="y" value="143" />
-    <option name="width" value="1920" />
-    <option name="height" value="1010" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
+              <item name="EasyX-ExtJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EasyX-ExtJS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
+              <item name="EasyX-ExtJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EasyX-ExtJS" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
+              <item name="EasyX-ExtJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EasyX-ExtJS" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iExtJs5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iExtJs5" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springboot-oauth2-authorization-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -248,13 +233,16 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
+      <window_info anchor="bottom" id="JRebel Executor" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.08884074" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18603411" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
+      <window_info id="JRebel" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -272,14 +260,14 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -289,7 +277,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.27193934" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
@@ -342,13 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -449,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/Root.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -541,20 +515,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/login/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1421">
-          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/main/PasswdModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/main/PasswdModel.js" />
     <entry file="file://$PROJECT_DIR$/app/view/main/MainModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -604,10 +565,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="325">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
         </state>
       </provider>
     </entry>
