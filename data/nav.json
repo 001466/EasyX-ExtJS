@@ -7,11 +7,38 @@
 		"mod": "desktop",
 		"modUrl": "desktop.Desktop"
 	},{
-		"text": "订单",
-		"leaf": true,
+		"text": "广告推广",
+		"expanded": false,
 		"cls": "node-link",
-		"mod": "order",
-		"modUrl": "order.Order"
+		"children": [{
+			"text": "订单",
+			"leaf": true,
+			"cls": "node-link",
+			"mod": "order",
+			"modUrl": "order.Order"
+		}]
+	},{
+		"text": "花样文字",
+		"expanded": true,
+		"cls": "node-link",
+		"children": [{
+			"text": "文字",
+			"leaf": true,
+			"cls": "node-link",
+			"mod": "word",
+			"modUrl": "word.Word"
+		}]
+	},{
+		"text": "系统管理",
+		"expanded": true,
+		"cls": "node-link",
+		"children": [{
+			"text": "字典",
+			"leaf": true,
+			"cls": "node-link",
+			"mod": "dic",
+			"modUrl": "dic.Dic"
+		}]
 	}
 
 

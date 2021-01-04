@@ -14,7 +14,7 @@ Ext.define("App.view.user.UserWin", {
 	
 	title: "新增用户",
 	width: 600,
-	height: 350,
+	height: 400,
 	resizable: false,
 	constrain: true,
 	modal: true,

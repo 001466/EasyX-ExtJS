@@ -1,85 +1,91 @@
 /*
- * 视图 - 角色管理
+ * 视图 - 花样文字
  */
 
-Ext.define("App.view.role.Role", {
+Ext.define("App.view.word.Word", {
 	extend: "Ext.grid.Panel",
-	xtype: "role",
-	id: "roleGrid",
+	xtype: "word",
+	id: "wordGrid",
 	
-	requires: ["App.view.role.RoleModel", "App.view.role.RoleController"],
+	requires: ["App.view.word.WordModel", "App.view.word.WordController"],
+
 	viewModel: {
-		type: "role"
+		type: "word"
 	},
-	controller: "role",
+	controller: "word",
 	
 	bind: {
-		store: "{role}"
+		store: "{word}"
 	},
 	initComponent: function() {
 		Ext.apply(this, {
 			selType: "checkboxmodel",
-			title: "角色管理",
+			title: "花样文字",
 			border: true,
 			columns: [{
-				text: "角色编号",
+				text: "编号",
 				dataIndex: "id",
 				flex: 1
 			}, {
-				text: "角色名称",
-				dataIndex: "roleName",
-				flex: 2
-			}, {
-				text: "角色描述",
-				dataIndex: "roleDesc",
-				flex: 2
-			}, {
+                text: "内容",
+                dataIndex: "text",
+                flex: 4
+            }, {
 				xtype: "actioncolumn",
 				text: "操作",
 				width: 100,
 				align: "center",
 				sortable: false,
 				menuDisabled: true,
-				items: [{
+				items: [/*{
 					iconCls: "opt-edit",
 					tooltip: "编辑",
 					handler: "edit"
-				}, {
+				},*/ {
 					iconCls: "opt-delete",
 					tooltip: "删除",
 					handler: "del"
 				}]
 			}],
 			tbar: [{
-				xtype: "textfield",
+				xtype: "datefield",
 				maxWidth: 205,
-				fieldLabel: "角色编号",
+				fieldLabel: "开始日期",
+				format:"Y-m-d",
+				name:"startDate",
 				labelWidth: 60
 			}, {
-				xtype: "textfield",
+				xtype: "datefield",
 				maxWidth: 205,
-				fieldLabel: "角色名称",
+				fieldLabel: "结束日期",
+				format:"Y-m-d",
+				name:"endDate",
 				labelWidth: 60
 			}, {
 				xtype: "button",
 				text: "搜索",
 				glyph: 0xf002,
 				handler: "search"
-			}, "->", "->", {
-				xtype: "button",
-				text: "新增",
-				glyph: 0xf067,
-				handler: "add"
-			}, {
+			},{
+                xtype: "button",
+                text: "添加",
+                glyph: 0xf040,
+                handler: "add"
+            }, {
+                xtype: "button",
+                text: "导出",
+                glyph: 0xf0ed,
+                handler: "exp"
+            }, "->", "->"/*, {
 				xtype: "button",
 				text: "批量删除",
 				glyph: 0xf00d,
 				handler: "batchDel"
-			}],
+			}*/],
 			bbar: {
 				xtype: "pagingtoolbar",
 				bind: {
-					store: "{role}"
+					store: "{word}"
 				},
 				displayInfo: true
 			},

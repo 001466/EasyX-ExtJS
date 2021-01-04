@@ -2,17 +2,17 @@
  * 窗口视图 - 角色管理
  */
 
-Ext.define("App.view.order.OrderWin", {
+Ext.define("App.view.dic.DicWin", {
 	extend: "Ext.window.Window",
-	xtype: "orderWin",
-	
-	requires: ["App.view.order.OrderModel", "App.view.order.OrderController"],
+	xtype: "dicWin",
+
+	requires: ["App.view.dic.DicModel", "App.view.dic.DicController"],
 	viewModel: {
-		type: "order"
+		type: "dic"
 	},
-	controller: "order",
-	
-	title: "新增订单",
+	controller: "dic",
+
+	title: "新增内容",
 	width: 600,
 	height: 400,
 	resizable: false,
@@ -24,12 +24,13 @@ Ext.define("App.view.order.OrderWin", {
 		tooltip: "刷新数据"
 	}],
 	*/
-	
+
 	initComponent: function() {
 		Ext.apply(this, {
 			items: [{
 				xtype: "form",
-				reference: "orderForm",
+				reference: "dicForm",
+				url:__ctx+"/system/v1/dict/submit",
 				margin: 10,
 				defaults: {
 					anchor: "100%"
@@ -46,14 +47,12 @@ Ext.define("App.view.order.OrderWin", {
 						type: "hbox",
 						align: "stretch"
 					},
-					items: [{
-						xtype: "hiddenfield",
-						name: "id",
-						value: ""
-					}, {
+					items: [ {
+					    allowBlank:true,
+					    readOnly: true,
 						xtype: "textfield",
-						name: "customName",
-						fieldLabel: "客户名称"
+						name: "id",
+						fieldLabel: "id"
 					}]
 				}, {
 					xtype: "container",
@@ -63,10 +62,10 @@ Ext.define("App.view.order.OrderWin", {
 					},
 					items: [{
 						xtype: "textfield",
-						name: "customMobile",
-						fieldLabel: "客户电话",
+						name: "code",
+						fieldLabel: "code",
 						grow: false,
-						allowBlank: true
+						allowBlank: false
 					}]
 				}, {
                     xtype: "container",
@@ -75,17 +74,29 @@ Ext.define("App.view.order.OrderWin", {
                         align: "stretch"
                     },
                     items: [{
-                        xtype: "combobox",
-                        name: "status",
-                        fieldLabel: "订单状态",
-                        bind: {
-                            store: "{status}"
-                        },
-                        displayField: "name",
-                        valueField: "id",
-                        editable : false
+                        xtype: "textfield",
+                        name: "dictKey",
+                        fieldLabel: "dictKey",
+                        grow: false,
+                        allowBlank: false
                     }]
-                }]
+                }, {
+                     xtype: "container",
+                     layout: {
+                         type: "hbox",
+                         align: "stretch"
+                     },
+                     items: [{
+                         xtype: "textfield",
+                         name: "dictValue",
+                         fieldLabel: "dictValue",
+                         grow: false,
+                         allowBlank: false
+                     }]
+                }
+
+
+				]
 			}],
 			buttonAlign: "center",
 			buttons: [{

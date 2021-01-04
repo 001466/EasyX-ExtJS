@@ -2,19 +2,19 @@
  * 窗口视图 - 角色管理
  */
 
-Ext.define("App.view.role.RoleWin", {
+Ext.define("App.view.word.WordWin", {
 	extend: "Ext.window.Window",
-	xtype: "rolewin",
-	
-	requires: ["App.view.role.RoleModel", "App.view.role.RoleController"],
+	xtype: "wordWin",
+
+	requires: ["App.view.word.WordModel", "App.view.word.WordController"],
 	viewModel: {
-		type: "role"
+		type: "word"
 	},
-	controller: "role",
-	
-	title: "新增角色",
+	controller: "word",
+
+	title: "新增文字",
 	width: 600,
-	height: 250,
+	height: 400,
 	resizable: false,
 	constrain: true,
 	modal: true,
@@ -24,12 +24,12 @@ Ext.define("App.view.role.RoleWin", {
 		tooltip: "刷新数据"
 	}],
 	*/
-	
+
 	initComponent: function() {
 		Ext.apply(this, {
 			items: [{
 				xtype: "form",
-				reference: "roleForm",
+				reference: "wordForm",
 				margin: 10,
 				defaults: {
 					anchor: "100%"
@@ -46,14 +46,11 @@ Ext.define("App.view.role.RoleWin", {
 						type: "hbox",
 						align: "stretch"
 					},
-					items: [{
-						xtype: "hiddenfield",
-						name: "id",
-						value: ""
-					}, {
+					items: [ {
+					    readOnly: true,
 						xtype: "textfield",
-						name: "roleName",
-						fieldLabel: "角色名称"
+						name: "id",
+						fieldLabel: "ID"
 					}]
 				}, {
 					xtype: "container",
@@ -63,10 +60,10 @@ Ext.define("App.view.role.RoleWin", {
 					},
 					items: [{
 						xtype: "textarea",
-						name: "roleDesc",
-						fieldLabel: "角色描述",
+						name: "text",
+						fieldLabel: "内容",
 						grow: false,
-						allowBlank: true
+						allowBlank: false
 					}]
 				}]
 			}],

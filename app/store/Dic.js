@@ -9,10 +9,11 @@ Ext.define("App.store.Dic", {
 	model: "App.model.Dic",
 	proxy: {
 		type: "ajax",
-		//url: "data/dic.json", //模拟后台访问地址
+		url: __ctx + "/system/v1/dict/page", //模拟后台访问地址
 		reader: {
 			type: "json",
-			rootProperty: "data"
+			rootProperty: "data.records",
+			totalProperty: 'data.total'
 		}
 	}
 });

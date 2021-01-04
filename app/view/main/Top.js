@@ -15,7 +15,7 @@ Ext.define("App.view.main.Top", {
 			layout: "auto",
 			items: [{
 				xtype: "image",
-				src: "img/logo.png",
+				//src: "img/logo.png",
 				cls: "main-logo"
 			}, {
 				xtype: "container",
