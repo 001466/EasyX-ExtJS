@@ -23,11 +23,11 @@ Ext.define("App.view.login.LoginController", {
                 success: function(form, action) {
 
                    __usr=action.result.data;
-                   __tkn=__usr.token;
+                   __tkn="Bearer "+__usr.access_token;
 
                    me.getView().destroy();
                    Ext.create("App.view.main.Main");
-                   Ext.getCmp("loginDisplayLabel").setText(__usr.username);
+                   Ext.getCmp("loginDisplayLabel").setText(__usr.account);
 
                    Ext.Ajax.on("beforerequest",	function(    conn,   options,   eOpts) {
                         Ext.apply(options, {
@@ -35,16 +35,11 @@ Ext.define("App.view.login.LoginController", {
                                 "Authorization":__tkn
                             }
                         });
-
-                        Ext.apply(options.params, {
-                            "tenantCode":__usr.tenantCode
-                        });
                    }, me);
-
 
                 },
                 failure: function(form, action) {
-                    Ext.Msg.alert('Failed', action.result ? action.result.msg : '登陆失败！');
+                    Ext.Msg.alert('Failed', action.response.responseText);
                 }
              });
 

@@ -42,7 +42,7 @@ Ext.define("App.view.order.OrderController", {
 	exp:function(){
         var sd= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=startDate]", this.tb)[0].getValue(),"Y-m-d");
     	var ed= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=endDate]", this.tb)[0].getValue(),"Y-m-d");
-    	window.location.href=__ctx+"/admin/order/export"+"?startDate="+sd +"&endDate="+ed +"&Authorization="+__tkn;
+    	window.location.href=__ctx+"/order/landingorder/admin/export"+"?startDate="+sd +"&endDate="+ed +"&Authorization="+__tkn;
     },
 	
 	//新增
@@ -71,7 +71,7 @@ Ext.define("App.view.order.OrderController", {
 				var id=grid.getStore().getAt(rowIndex).get("id");
 				Ext.Ajax.request({
 				    //请求地址
-				    url: __ctx+"/admin/order/del/"+id,
+				    url: __ctx+"/order/landingorder/admin/remove/"+id,
 				    method: 'post',
 				    async: false,//Ext.Ajax.request默认是异步的，可以通过设置参数async:false来使其变为同步
 				    success: function (response, success) {

@@ -26,7 +26,7 @@ Ext.define("App.model.Order", {
           {name:"productBranch"},
           {name:"productId"},
           {name:"productMaterial"},
-          {name:"productPrices"},
+          {name:"productPrice"},
           {name:"productType"},
           {name:"type"},
           {name:"status"}

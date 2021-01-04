@@ -34,6 +34,21 @@ Ext.define("App.view.main.MainController", {
 	exitSys: function() {
 		this.getView().destroy();
 		Ext.create("App.view.login.Login");
+		var me=this;
+		Ext.Ajax.request({
+            url: __ctx+"/auth/logout",
+            params: {
+                "Authorization":__tkn
+            }
+        });
+
+        Ext.Ajax.on("beforerequest",	function(    conn,   options,   eOpts) {
+            Ext.apply(options, {
+                headers:{
+//                    "Authorization":__tkn
+                }
+            });
+       }, me);
 	},
 
 	setPasswd:function(){
@@ -48,19 +63,9 @@ Ext.define("App.view.main.MainController", {
 	sbmPasswd:function(btn){
 	    var fr = this.lookupReference("passwdForm").getForm();
         if(fr.isValid()) {
-            fr.submit({
-                url:__ctx+"/admin/user/password/reset",
-                success: function(form, action) {
-                   console.log(action);
-
-                   Ext.Msg.alert('保存成功', action.result.message);
-
-                   btn.up("passwdwin").close();
-                },
-                failure: function(form, action) {
-                    Ext.Msg.alert('操作失败', action.result.message);
-                }
-            });
+//            fr.submit({
+//
+//            });
         }
 
 

@@ -9,7 +9,7 @@ Ext.define("App.store.Order", {
 	model: "App.model.Order",
 	proxy: {
 		type: "ajax",
-		url: __ctx+"/admin/order/list", //模拟后台访问地址
+		url: __ctx+"/order/landingorder/admin/list", //模拟后台访问地址
 		reader: {
 			type: "json",
 			rootProperty: "data"

@@ -34,9 +34,9 @@ Ext.define("App.view.main.PasswdWin", {
 				items: [
                     {
                         fieldLabel: '登陆号',
-                        value:__usr.username,
+                        value:__usr.userId,
                         readOnly:true,
-                        name: 'username'
+                        name: 'id'
                     },{
                         fieldLabel: '原密码',
                         allowBlank:false,

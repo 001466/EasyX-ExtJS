@@ -62,7 +62,7 @@ Ext.define("App.view.order.Order", {
                  flex: 2
              },{
                text: "产品价格",
-               dataIndex: "productPrices",
+               dataIndex: "productPrice",
                flex: 1
              },{
                text: "客户留言",

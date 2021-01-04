@@ -32,7 +32,7 @@ Ext.define("App.view.login.Login", {
 					cls: "login-logo"
 				}, {
 					xtype: "form",
-					url:__ctx+"/admin/login",
+					url:__ctx+"/auth/login",
 					reference: "loginForm",
 					defaultType: "textfield",
 					fieldDefaults: {
@@ -56,7 +56,25 @@ Ext.define("App.view.login.Login", {
 						listeners: {
 							specialKey: "onSpecialKey"
 						}
-					}]
+					},{
+                        name: "grant_type",
+                        inputType: "hidden",
+                        value: __grt
+                    },{
+                        name: "scope",
+                        inputType: "hidden",
+                        value: __scp
+                    },{
+                        name: "client_id",
+                        inputType: "hidden",
+                        value: __cid
+                    },{
+                        name: "client_secret",
+                        inputType: "hidden",
+                        value: __csc
+                    }
+
+					]
 				}],
 				buttonAlign: "center",
 				buttons: [{
