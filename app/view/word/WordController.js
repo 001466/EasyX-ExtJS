@@ -18,12 +18,10 @@ Ext.define("App.view.word.WordController", {
             var typ=typStore.getValue();
             var tag=tagStore.getValue();
 
-            var arg=tag;
-            if (typeof(arg)=="undefined"){
-                arg=typ;
-            }
+
 		    Ext.apply(store.proxy.extraParams, {
-                tag:arg
+                typ:typ,
+                tag:tag
 		    });
 
 		},this);
@@ -107,9 +105,15 @@ Ext.define("App.view.word.WordController", {
             fr.submit({
                 scope:this,
                 success: function(form, action) {
+
                       Ext.Msg.alert('成功', action.response.responseText);
-                        //btn.up("dicWin").close();
+                      var id=fr.findField("id").getValue();
                       me.getViewModel().getStore("word").reload();
+
+                      if(typeof(id)!="undefined" && id!=0 && id !=null ){
+                        btn.up("wordWin").close();
+                      }
+
                 },
                 failure: function(form, action) {
                        Ext.Msg.alert('失败', action.response.responseText);
@@ -122,4 +126,6 @@ Ext.define("App.view.word.WordController", {
 	cancel: function(btn) {
 		btn.up("wordWin").close();
 	}
+
+
 });

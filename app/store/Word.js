@@ -8,10 +8,11 @@ Ext.define("App.store.Word", {
 	model: "App.model.Word",
 	proxy: {
 		type: "ajax",
-		url: __ctx + "/word/word/list", //模拟后台访问地址
+		url: __ctx + "/word/word/page", //模拟后台访问地址
 		reader: {
 			type: "json",
-			rootProperty: "data"
+            rootProperty: "data.records",
+            totalProperty: 'data.total'
 		}
 	}
 });

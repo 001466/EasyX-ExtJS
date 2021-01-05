@@ -77,7 +77,7 @@ Ext.define("App.view.word.WordWin", {
                     },
                     items: [{
                         xtype: "wordTypeCombo",
-                        name: "tag",
+                        name: "typ",
                         fieldLabel: "分类",
                         grow: false,
                         allowBlank: false

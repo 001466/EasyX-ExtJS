@@ -29,11 +29,19 @@ Ext.define("App.view.word.Word", {
 				text: "编号",
 				dataIndex: "id",
 				flex: 1
-			}, {
+			},{
                 text: "内容",
                 dataIndex: "text",
                 flex: 4
-            }, {
+            },{
+              text: "类型",
+              dataIndex: "typ",
+              flex: 1
+            },{
+               text: "标签",
+               dataIndex: "tag",
+               flex: 1
+            },{
 				xtype: "actioncolumn",
 				text: "操作",
 				width: 100,

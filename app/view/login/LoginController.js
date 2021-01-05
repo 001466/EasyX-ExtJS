@@ -37,6 +37,7 @@ Ext.define("App.view.login.LoginController", {
                         });
                    }, me);
 
+
                 },
                 failure: function(form, action) {
                     Ext.Msg.alert('Failed', action.response.responseText);
