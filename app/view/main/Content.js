@@ -14,7 +14,7 @@ Ext.define("App.view.main.Content", {
 			margin: "0 5 0 0",
 			layout: "fit",
 			items: [{
-				xtype: "dic"
+				xtype: "word"
 			}]
 		});
 		this.callParent(arguments);

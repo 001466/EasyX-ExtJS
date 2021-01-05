@@ -12,7 +12,7 @@ Ext.define("App.view.word.WordModel", {
 	stores: {
 		word: {
 			type: "word",
-			pageSize: 10,
+			pageSize: 20,
 			autoLoad: true
 		}
 //		,

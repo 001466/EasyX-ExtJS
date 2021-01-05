@@ -6,7 +6,7 @@ Ext.define("App.view.word.WordWin", {
 	extend: "Ext.window.Window",
 	xtype: "wordWin",
 
-	requires: ["App.view.word.WordModel", "App.view.word.WordController"],
+	requires: ["App.view.word.WordModel", "App.view.word.WordController","App.view.word.WordTypeCombo","App.view.word.WordTagCombo"],
 	viewModel: {
 		type: "word"
 	},
@@ -40,7 +40,9 @@ Ext.define("App.view.word.WordWin", {
 					labelWidth: 60,
 					allowBlank: false
 				},
-				items: [{
+				items: [
+
+				{
 					xtype: "container",
 					layout: {
 						type: "hbox",
@@ -48,11 +50,12 @@ Ext.define("App.view.word.WordWin", {
 					},
 					items: [ {
 					    readOnly: true,
+					    allowBlank: true,
 						xtype: "textfield",
 						name: "id",
-						fieldLabel: "ID"
+						fieldLabel: "主键"
 					}]
-				}, {
+				},{
 					xtype: "container",
 					layout: {
 						type: "hbox",
@@ -65,7 +68,36 @@ Ext.define("App.view.word.WordWin", {
 						grow: false,
 						allowBlank: false
 					}]
-				}]
+				},{
+                    xtype: "container",
+                    layout: {
+                        type: "hbox",
+                        align: "stretch"
+                    },
+                    items: [{
+                        xtype: "wordTypeCombo",
+                        name: "tag",
+                        fieldLabel: "分类",
+                        grow: false,
+                        allowBlank: false
+                    }]
+                },{
+                     xtype: "container",
+                     layout: {
+                         type: "hbox",
+                         align: "stretch"
+                     },
+                     items: [{
+                         xtype: "wordTagCombo",
+                         name: "tag",
+                         fieldLabel: "标签",
+                         grow: false,
+                         allowBlank: false
+                     }]
+                }
+
+
+				]
 			}],
 			buttonAlign: "center",
 			buttons: [{

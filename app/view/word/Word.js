@@ -47,21 +47,20 @@ Ext.define("App.view.word.Word", {
 					handler: "del"
 				}]
 			}],
-			tbar: [{
-				xtype: "datefield",
-				maxWidth: 205,
-				fieldLabel: "开始日期",
-				format:"Y-m-d",
-				name:"startDate",
-				labelWidth: 60
-			}, {
-				xtype: "datefield",
-				maxWidth: 205,
-				fieldLabel: "结束日期",
-				format:"Y-m-d",
-				name:"endDate",
-				labelWidth: 60
-			}, {
+			tbar: [
+			{
+               xtype: "wordTypeCombo",
+               name: "tag",
+               fieldLabel: "分类",
+               grow: false,
+               allowBlank: false
+            },{
+                 xtype: "wordTagCombo",
+                 name: "tag",
+                 fieldLabel: "标签",
+                 grow: false,
+                 allowBlank: false
+            }, {
 				xtype: "button",
 				text: "搜索",
 				glyph: 0xf002,

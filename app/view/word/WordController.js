@@ -1,5 +1,5 @@
 /*
- * 视图控制器 - 角色管理
+ * 视图控制器 -
  */
 
 Ext.define("App.view.word.WordController", {
@@ -10,27 +10,23 @@ Ext.define("App.view.word.WordController", {
 
 	init: function() {
 
-
-		this.st = Ext.getCmp("wordGrid").getStore(); //通过Component获取Store
-		this.tb = Ext.getCmp("wordGrid").getDockedItems('toolbar[dock="top"]')[0];
-
-
-
-
 		this.getViewModel().getStore("word").addListener('beforeload',function(store, options){
 
+		    var typStore=Ext.ComponentQuery.query("wordTypeCombo[name=tag]", this.tb)[0];
+            var tagStore=Ext.ComponentQuery.query("wordTagCombo[name=tag]", this.tb)[0];
 
-			var sd= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=startDate]", this.tb)[0].getValue(),"Y-m-d");
-			var ed= Ext.Date.format( Ext.ComponentQuery.query("datefield[name=endDate]", this.tb)[0].getValue(),"Y-m-d");
+            var typ=typStore.getValue();
+            var tag=tagStore.getValue();
 
-
-
+            var arg=tag;
+            if (typeof(arg)=="undefined"){
+                arg=typ;
+            }
 		    Ext.apply(store.proxy.extraParams, {
-		     	startDate:sd,
-				endDate:ed
+                tag:arg
 		    });
 
-		 },this);
+		},this);
 
 	},
 
