@@ -123,7 +123,7 @@ Ext.define("App.view.order.Order", {
 				displayInfo: true
 			},
 			listeners: {
-				itemclick: function(view, record, item, index, e, eOpts) {}
+				itemdblclick: function(view, record, item, index, e, eOpts) {}
 			}
 		});
 		this.callParent(arguments);

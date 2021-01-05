@@ -127,7 +127,7 @@ Ext.define("App.view.user.User", {
 				displayInfo: true
 			},
 			listeners: {
-				itemclick: function(view, record, item, index, e, eOpts) {}
+				itemdblclick: function(view, record, item, index, e, eOpts) {}
 			}
 		});
 		this.callParent(arguments);

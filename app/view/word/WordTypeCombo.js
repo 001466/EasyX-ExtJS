@@ -19,6 +19,7 @@ Ext.define("App.view.word.WordTypeCombo", {
     queryMode: 'local',
     displayField: 'name',
     valueField: 'id',
+    editable: false,
     listeners: {
         select:"typSelect"
     }

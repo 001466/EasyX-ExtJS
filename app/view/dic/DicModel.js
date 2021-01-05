@@ -13,7 +13,7 @@ Ext.define("App.view.dic.DicModel", {
 
 		dic: {
 		    type: "dic",
-            pageSize: 10,
+            pageSize: 20,
             autoLoad: true
 		}
 

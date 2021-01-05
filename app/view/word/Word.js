@@ -17,6 +17,9 @@ Ext.define("App.view.word.Word", {
 	bind: {
 		store: "{word}"
 	},
+	listeners: {
+        itemdblclick: "edit"
+    },
 	initComponent: function() {
 		Ext.apply(this, {
 			selType: "checkboxmodel",
@@ -87,9 +90,6 @@ Ext.define("App.view.word.Word", {
 					store: "{word}"
 				},
 				displayInfo: true
-			},
-			listeners: {
-				itemclick: function(view, record, item, index, e, eOpts) {}
 			}
 		});
 		this.callParent(arguments);

@@ -30,6 +30,7 @@ Ext.define("App.view.word.WordWin", {
 			items: [{
 				xtype: "form",
 				reference: "wordForm",
+				url:__ctx+"/word/word/submit",
 				margin: 10,
 				defaults: {
 					anchor: "100%"

@@ -103,17 +103,17 @@ Ext.define("App.view.dic.DicController", {
 		var fr = this.lookupReference("dicForm").getForm();
 		if(fr.isValid()) {
 		    var me=this;
-             fr.submit({
+            fr.submit({
                 scope:this,
                 success: function(form, action) {
                       Ext.Msg.alert('成功', action.response.responseText);
-//                      btn.up("dicWin").close();
+                        //btn.up("dicWin").close();
                       me.getViewModel().getStore("dic").reload();
                 },
                 failure: function(form, action) {
                        Ext.Msg.alert('失败', action.response.responseText);
                 }
-             });
+            });
 		}
 	},
 

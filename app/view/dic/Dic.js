@@ -91,7 +91,7 @@ Ext.define("App.view.dic.Dic", {
 				displayInfo: true
 			},
 			listeners: {
-				itemclick: function(view, record, item, index, e, eOpts) {
+				itemdblclick: function(view, record, item, index, e, eOpts) {
 
 				}
 			}

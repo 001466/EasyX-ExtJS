@@ -46,8 +46,8 @@ Ext.define("App.view.word.WordController", {
 	},
 
 	//编辑
-	edit: function(grid, rowIndex, colIndex) {
-		var rec = grid.getStore().getAt(rowIndex);
+	edit: function(grid, record, item, index, e, eOpts) {
+		var rec = grid.getStore().getAt(index);
 		var win = Ext.create("App.view.word.WordWin", {
 			title: "编辑 - #" + rec.get("id")
 		});
@@ -103,19 +103,18 @@ Ext.define("App.view.word.WordController", {
 	save: function(btn) {
 		var fr = this.lookupReference("wordForm").getForm();
 		if(fr.isValid()) {
-			var id = fr.findField("id").getValue();
-			if(id) { //编辑
-				var rec = this.st.getById(id);
-				//rec.set("roleName", fr.findField("roleName").getValue());
-				//rec.set("roleDesc", fr.findField("roleDesc").getValue());
-				//this.st.rejectChanges();	//取消所有修改
-				this.st.commitChanges();	//提交修改数据
-			}else { //新增
-				var obj = fr.getFieldValues();
-				obj.id = this.st.last() ? parseInt(this.st.last().get("id"))+1 : 1;
-				this.st.add(obj);
-			}
-			btn.up("wordWin").close();
+			var me=this;
+            fr.submit({
+                scope:this,
+                success: function(form, action) {
+                      Ext.Msg.alert('成功', action.response.responseText);
+                        //btn.up("dicWin").close();
+                      me.getViewModel().getStore("word").reload();
+                },
+                failure: function(form, action) {
+                       Ext.Msg.alert('失败', action.response.responseText);
+                }
+            });
 		}
 	},
 

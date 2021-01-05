@@ -8,6 +8,7 @@ Ext.define("App.view.word.WordTagCombo", {
 	bind: {
     	store: "{dic}"
     },
+    editable: false,
     controller: "wordCombo",
     queryMode: 'local',
     displayField: 'dictValue',
