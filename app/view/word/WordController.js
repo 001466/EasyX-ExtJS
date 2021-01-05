@@ -20,6 +20,8 @@ Ext.define("App.view.word.WordController", {
 
 
 		    Ext.apply(store.proxy.extraParams, {
+		        page: 1,
+                start: 0,
                 typ:typ,
                 tag:tag
 		    });

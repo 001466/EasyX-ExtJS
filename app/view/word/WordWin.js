@@ -76,9 +76,13 @@ Ext.define("App.view.word.WordWin", {
                         align: "stretch"
                     },
                     items: [{
-                        xtype: "wordTypeCombo",
+                        xtype: "tagfield",
                         name: "typ",
                         fieldLabel: "分类",
+                        store:Ext.create('App.store.WordTyp', {
+
+                        }),
+                        displayField: 'name', valueField: 'id', queryMode: 'local', filterPickList: true,
                         grow: false,
                         allowBlank: false
                     }]
@@ -89,13 +93,23 @@ Ext.define("App.view.word.WordWin", {
                          align: "stretch"
                      },
                      items: [{
-                         xtype: "wordTagCombo",
+                         xtype: "tagfield",
                          name: "tag",
                          fieldLabel: "标签",
+                         store:Ext.create('App.store.Dic', {
+
+                         }),
+                         displayField: 'dictValue', valueField: 'dictKey', queryMode: 'remote', filterPickList: true,
                          grow: false,
                          allowBlank: false
                      }]
                 }
+
+/*
+Ext.create('Ext.form.Panel', { renderTo: Ext.getBody(), title: 'Sci-Fi Television', height: 200, width: 500, items:
+[{ xtype: 'tagfield', fieldLabel: 'Select a Show', store: shows, displayField: 'show', valueField: 'id', queryMode: 'local', filterPickList: true }] });
+*/
+
 
 
 				]
